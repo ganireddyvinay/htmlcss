@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e91e63, #673ab7);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 25px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .input-box {
+      flex: 1 1 calc(50% - 20px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-box.full-width {
+      flex-basis: 100%;
+    }
+
+    label {
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .gen {
+      display: flex;
+      gap: 15px;
+      margin-top: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #673ab7;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #512da8;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Registration</h2>
+
+    <form class="form">
+      <div class="input-box">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname">
+      </div>
+
+      <div class="input-box">
+        <label for="lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname">
+      </div>
+
+      <div class="input-box">
+        <label for="birthday">Birthday</label>
+        <input type="date" id="birthday" name="birthday">
+      </div>
+
+      <div class="input-box full-width">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <div class="input-box full-width">
+        <label>Gender</label>
+        <div class="gen">
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+        </div>
+      </div>
+
+      <div class="input-box full-width">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="input-box full-width">
+        <button type="submit">Register</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
